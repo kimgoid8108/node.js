@@ -2,6 +2,13 @@ const express = require("express");
 const app = express();
 const { icecreams } = require("./data");
 
+// JSON 본문 파싱(해석) 가능하게 해줌
+app.use(express.json());
+// HTML form에서 전송된 데이터를 서버에서 읽을 수 있도록 옵션 설정 true
+app.use(express.urlencoded({ extended: true }));
+
+// http: request - method[GET(가져오기), POST(생성하기)]
+
 app.get("/", (req, res) => {
   res.send("<h1>베라베라 맛있는 베라 어서오고</h1>");
 });
@@ -23,6 +30,12 @@ app.get("/menu/:id", (req, res) => {
     res.send("그런 아이스크림은 없지용~~");
   }
   res.json(icecreams[+id]);
+});
+
+app.post("/add", (req, res) => {
+  const { name, kcal, flavor1, flavor2 } = req.body;
+  icecreams.push({ name, kcal, flavor1, flavor2 });
+  res.json(`${name} 아이스크림이 추가 됐습니다!`);
 });
 
 app.listen(3000, () => {
