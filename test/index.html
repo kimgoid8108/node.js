@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>양문교회</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-wrapper">
+            <h1 class="logo">양문교회</h1>
+
+            <nav class="nav desktop-only">
+                <a href="#">교회소개</a>
+                <a href="#">예배</a>
+                <a href="#">온라인예배</a>
+                <a href="#">갤러리</a>
+                <a href="#">교회소식</a>
+            </nav>
+
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+        </div>
+
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="#">교회소개</a>
+            <a href="#">예배</a>
+            <a href="#">온라인예배</a>
+            <a href="#">갤러리</a>
+            <a href="#">교회소식</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-inner">
+            <p class="subtitle">“나는 양의 문이라”</p>
+            <h2 class="hero-title">대한예수교장로회 양문교회</h2>
+            <a href="#" class="hero-btn">예배 안내 보기</a>
+        </div>
+    </section>
+
+    <!-- Section: Latest News -->
+    <section class="section">
+        <div class="container">
+            <h3 class="section-title">최근 소식</h3>
+
+            <div class="card-grid">
+                <div class="card">
+                    <p class="card-date">2025.11.16</p>
+                    <h4 class="card-title">2025년 11월 16일 교회소식</h4>
+                </div>
+
+                <div class="card">
+                    <p class="card-date">2025.11.09</p>
+                    <h4 class="card-title">주보 (251109)</h4>
+                </div>
+
+                <div class="card">
+                    <p class="card-date">2025.11.08</p>
+                    <h4 class="card-title">2025년 11월 9일 교회소식</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Gallery -->
+    <section class="section bg-light">
+        <div class="container">
+            <h3 class="section-title">갤러리</h3>
+
+            <div class="gallery-grid">
+                <img src="https://picsum.photos/id/1011/400/260" alt="">
+                <img src="https://picsum.photos/id/1015/400/260" alt="">
+                <img src="https://picsum.photos/id/1022/400/260" alt="">
+                <img src="https://picsum.photos/id/1031/400/260" alt="">
+            </div>
+
+            <div class="center mt-20">
+                <a class="btn-outline" href="#">갤러리 더 보기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Video -->
+    <section class="section">
+        <div class="container">
+            <h3 class="section-title">온라인 예배</h3>
+
+            <div class="video-wrap">
+                <iframe
+                    src="https://www.youtube.com/embed/bDEBYAEF9T0"
+                    frameborder="0"
+                    allowfullscreen
+                ></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p class="footer-title">대한예수교장로회 양문교회</p>
+            <p>
+                경기도 시흥시 비둘기공원1길 22 &nbsp;|&nbsp; TEL 031-314-6020
+                &nbsp;|&nbsp; EMAIL ym6020@naver.com
+            </p>
+            <p class="copyright">
+                © 2025 YMC1004. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -4,6 +4,7 @@ const { icecreams } = require("./data");
 
 // JSON 본문 파싱(해석) 가능하게 해줌
 app.use(express.json());
+
 // HTML form에서 전송된 데이터를 서버에서 읽을 수 있도록 옵션 설정 true
 app.use(express.urlencoded({ extended: true }));
 

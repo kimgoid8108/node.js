@@ -12,10 +12,11 @@ const getRandomInteger = (min, max) => {
 const makePerson = () => {
   const faker = new Faker({ locale: [ko] });
   const name = faker.person.fullName();
-  const gender = chance.weighted(["male", "female"], [60, 40]);
-  const salary = getRandomInteger(3000, 30000);
-
-  const departments = chance.weighted(
+  const grade = chance.weighted(
+    ["1", "2", "3", "4", "5", "6"],
+    [30, 30, 20, 10, 5, 5]
+  );
+  const department_id = chance.weighted(
     ["marketing", "IT", "advertising", "design", "finance"],
     [50, 10, 20, 10, 10]
   );

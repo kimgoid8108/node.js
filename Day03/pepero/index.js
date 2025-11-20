@@ -1,6 +1,5 @@
 const express = require("express");
-const ExcelJS = require("exceljs");
-const getPepero = require();
+const getPepero = require("./pepero_data");
 const app = express();
 
 app.get("/", (req, res) => {
@@ -10,6 +9,13 @@ app.get("/", (req, res) => {
 app.get("/list", async (req, res) => {
   const data = await getPepero();
   res.json(data);
+});
+
+// 동적 파라메터
+app.get("/list/:abc", async (req, res) => {
+  const { abc } = req.params;
+  const data = await getPepero();
+  res.json(data[+abc - 1]);
 });
 
 app.listen(3000, () => {
