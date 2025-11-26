@@ -5,7 +5,6 @@ import boom from "express-boom";
 import cors from "cors";
 
 import { responseMiddleware } from "./src/middleware/response.middleware.js";
-import { authMiddleware } from "./src/middleware/auth.middleware.js";
 
 import authRoutes from "./src/routes/auth.routes.js";
 import postRoutes from "./src/routes/posts.routes.js";

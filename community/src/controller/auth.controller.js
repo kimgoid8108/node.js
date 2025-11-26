@@ -65,7 +65,7 @@ export const login = async (req, res) => {
 };
 
 export const logout = async (req, res) => {
-  const sessionID = req.cookies.sessionID;
+  const sessionID = req.cookies.sessionId;
 
   res.clearCookie("sessionID", {
     httpOnly: true,
